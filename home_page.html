@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 這是icon的網址==> https://ionic.io/ionicons -->
+    <!-- 這是function_column的參考影片==>https://youtu.be/ArTVfdHOB-M -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link href="home_page.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <main class="form-signin">
+      <iframe src="main/main.html" name="main" id="mainframe" scrolling="no" frameborder="0" height="550px" width="100%" ></iframe>
+      <div class="body_function">
+        <div class="navigation">
+          <ul>
+            <li class="list active">
+              <a href="main/main.html" target="main">
+                <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                <span class="text">User</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" target="main">
+                <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                <span class="text">Setting</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" target="main">
+                <span class="icon"><ion-icon name="partly-sunny-outline"></ion-icon></ion-icon></span>
+                <span class="text">Weather</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" target="main">
+                <span class="icon"><ion-icon name="navigate-outline"></ion-icon></ion-icon></ion-icon></span>
+                <span class="text">Map</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" target="main">
+                <span class="icon"><ion-icon name="book-outline"></ion-icon></ion-icon></ion-icon></span>
+                <span class="text">Curriculum</span>
+              </a>
+            </li>
+            <div class="indicator"></div>
+          </ul>
+        </div>
+      </div>
+    <script>
+      const list=document.querySelectorAll('.list');
+      function activeLink(){
+        list.forEach((item)=>item.classList.remove('active'));
+        this.classList.add('active');
+      }
+      list.forEach((item)=>item.addEventListener('click',activeLink));
+    </script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
